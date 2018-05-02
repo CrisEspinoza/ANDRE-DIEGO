@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form method="POST">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2>Nuevo usuario</h2></div>
+                    <div class="panel-body">
+                        <!-- Data of the student -->
+                        <!-- First row: Name and lastname -->
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label> Nombre: </label>
+                                <input type="text" id = "nameUser" ng-model="nameUser" class="form-control" placeholder="José Miguel">
+                            </div>
+                            <div class="col-md-6">
+                                <label> Apellidos: </label>
+                                <input type="text" id = "lastName" ng-model="lastName" class="form-control" placeholder="Risopatrón Larraín">
+                            </div>
+
+                        </div>
+                        <!-- Second row: run and mail-->
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label> RUN: </label>
+                                <input type="text" id = "rut" ng-model="rut" class="form-control" placeholder="12.345.678-9" ng-change="rutCompleter()">
+                            </div>
+                            <div class="col-md-8">
+                                <label> Correo electrónico: </label>
+                                <input type="text" id = "email" ng-model="email" class="form-control" placeholder="ejemplo@dominio.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="check" value="coordinador"> Coordinador?
+                            </label>
+                        </div>
+
+                        <!-- Third row: career-->
+
+                        <!-- -->
+                    </div>
+                    <div class="panel-footer">
+                        <input class="btn btn-info btn-lg" type="submit" ng-click="addUser()" value="Agregar Usuario">
+                        <input class="btn btn-info btn-lg" type="button" ng-click="go('/administrator/home')" value="Cancelar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

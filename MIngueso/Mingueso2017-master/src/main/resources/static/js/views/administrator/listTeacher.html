@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2> Listado de profesores </h2></div>
+          <div class="panel-body" id="content" ng-controller="listTeacherController" ng-init="getTeachers()" ng-show="teachers != null">
+            <table class="table table-hover">
+
+              <tr>
+                <th> Nombre </th>
+                <th> Apellido </th>
+                <th> Mail </th>
+                <th> Acción </th>
+              </tr>
+              <tr ng-repeat="teacher in teachers">
+                  <td> {{ teacher.name }} </td>
+                  <td> {{ teacher.lastName }} </td>
+                  <td> {{ teacher.email }} </td>
+                  <td><button type="button" class="btn btn-warning"> Modificar </button>
+                      <button type="button" class="btn btn-danger" ng-click="delTeacher(teacher.id_teacher)"> Eliminar </button>
+                  </td>
+              </tr>
+            </table>
+
+          </div>
+        <div class="panel-footer">
+            <input class="btn btn-info btn-lg" type="button" ng-click="go('/administrator/home')" value="Atras">
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+</div>

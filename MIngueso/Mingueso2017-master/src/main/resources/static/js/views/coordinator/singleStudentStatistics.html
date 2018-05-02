@@ -1,0 +1,48 @@
+<div align="center" ng-show="spinner">
+    <div class = thumbnail>
+        <div class="loader"></div>
+
+    </div>
+</div>
+
+
+<div class = "thumbnail">
+    <div class = "container">
+        <div class = "row vertical-align">
+            <div class = "col-md-6">
+                <h2>{{name}}</h2>
+                <h4>{{rut}}</h4>
+                <h4>{{mail}}</h4>
+                <div ng-show = "!spinner">
+                    <input class="btn btn-info btn-lg" type="button" ng-click="go('/coordinator/coordinationOverview')" value="Atras">
+                </div>
+            </div>
+            <div class = "col-md-6">
+                <nvd3 options="options1" data="data1" on-ready="callback"></nvd3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class = "thumbnail">
+    <div class = "container">
+        <br>
+        <div class = "row">
+            <div class = "col-md-12"><nvd3 options="options2" data="data2" on-ready="callback"></nvd3></div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-12"><nvd3 options="options2" data="data3" on-ready="callback"></nvd3></div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-12"><nvd3 options="options2" data="data4" on-ready="callback"></nvd3></div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-12"><nvd3 options="options2" data="data5" on-ready="callback"></nvd3></div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-12"><nvd3 options="options2" data="data6" on-ready="callback"></nvd3></div>
+        </div>
+    </div>
+
+</div>

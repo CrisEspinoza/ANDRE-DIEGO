@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form method="POST">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2>Modificar Estudiante</h2></div>
+                    <div class="panel-body">
+                        <!-- Data of the student -->
+                        <!-- First row: Name and lastname -->
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label> Nombre: </label>
+                                <input type="text" id = "name" ng-model="name" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label> Apellidos: </label>
+                                <input type="text" id = "lastName" ng-model="lastName" class="form-control">
+                            </div>
+
+                        </div>
+                        <!-- Second row: run and mail-->
+                        <div class="form-group row">
+
+                            <div class="col-md-8">
+                                <label> Correo electrónico: </label>
+                                <input type="text" id = "email" ng-model="email" class="form-control">
+                            </div>
+                        </div>
+
+                        <!--<div class="form-group row">
+                            <label class="checkbox-inline">
+                                <input type="checkbox"  value="coordinador"> Modificar contraseña
+                            </label>
+
+                            <div class="col-md-3">
+                                <label> Antigua contraseña </label>
+                                <input type="password" id = "password" ng-model="password" name = "password" class="form-control">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-3">
+                                <label> Nueva password </label>
+                                <input type="password" id = "passwordmodify1" ng-model="password" name = "password1" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <label> Confirmar nueva password </label>
+                                <input type="password" id = "passwordmodify2" ng-model="password" name = "password2" class="form-control">
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="panel-footer">
+                        <input class="btn btn-primary" type="button" value="Guardar cambios">
+                        <input class="btn btn-primary" type="button" ng-click="go('/coordinator/listTeacher')" value="Cancelar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

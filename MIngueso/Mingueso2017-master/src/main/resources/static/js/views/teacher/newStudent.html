@@ -1,0 +1,50 @@
+<html ng-app="Myapp" ng-controller="newStudentController">
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form method="POST">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2>Nuevo estudiante</h2></div>
+                    <div class="panel-body">
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label> Nombre: </label>
+                                <input type="text" id = "nameUser" ng-model="nameUser" class="form-control" placeholder="José Miguel">
+                            </div>
+                            <div class="col-md-6">
+                                <label> Apellidos: </label>
+                                <input type="text" id = "lastName" ng-model="lastName" class="form-control" placeholder="Risopatrón Larraín">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label> RUN:</label>
+                                <input type="text" id = "rut" ng-model="rut" class="form-control" placeholder="12.345.678-9" ng-change="rutCompleter()">
+                            </div>
+                            <div class="col-md-8">
+                                <label> Correo electrónico: </label>
+                                <input type="text" id = "email" ng-model="email" class="form-control" placeholder="ejemplo@dominio.com">
+                            </div>
+                        </div>
+
+                          <div class="form-group row">
+                            <!--div class="col-md-8">
+                                <label for="id_coordination"> Coordinacion:</label>
+                                <input id="id_coordination" ng-model="id_coordination" type="id_coordination" class="form-control">
+                            </div-->
+                        </div>
+
+                        <!-- Third row: career-->
+
+                        <!-- -->
+                    </div>
+                    <div class="panel-footer">
+                        <input class="btn btn-info btn-lg" type="button" ng-click="addStudent()" value="Agregar Alumno">
+                        <input class="btn btn-info btn-lg" type="button" ng-click="go('/teacher/home')" value="Atras">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

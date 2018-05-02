@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html ng-app="Myapp" ng-controller="mainController">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> {{ title }} </title>
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="js/shared/jquery.js"></script>
+    <script type="text/javascript" src="js/shared/bootstrap.js"></script>
+    <script type="text/javascript" src="js/shared/angular.js"></script>
+    <script type="text/javascript" src="js/shared/angular-route.js"></script>
+    <link rel="stylesheet" type="text/css" href="codemirror/lib/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="codemirror/theme/material.css">
+    <link rel="stylesheet" type="text/css" href="css/loaderWheel.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- dependencies of angular -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/mainController.js"></script>
+    <script type="text/javascript" src="js/controllers/loginController.js"></script>
+    <script type="text/javascript" src="js/controllers/studentController/homeStudentController.js"></script>
+    <script type="text/javascript" src="js/controllers/studentController/exerciseStudentController.js"></script>
+    <script type="text/javascript" src="js/controllers/studentController/languageSelectorController.js"></script>
+    <script type="text/javascript" src="js/controllers/studentController/codingViewController.js"></script>
+    <script type="text/javascript" src="js/controllers/studentController/studentWorkbenchController.js"></script>
+    <script type="text/javascript" src="js/controllers/teacherController/newStudentController.js"></script>
+    <script type="text/javascript" src="js/controllers/teacherController/homeTeacherController.js"></script>
+    <script type="text/javascript" src="js/controllers/teacherController/listCoursesController.js"></script>
+    <script type="text/javascript" src="js/controllers/teacherController/modifyStudentController.js"></script>
+    <script type="text/javascript" src="js/controllers/teacherController/newExerciseController.js"></script>
+    <script type="text/javascript" src="js/controllers/teacherController/exercisesController.js"></script>
+    <script type="text/javascript" src="js/controllers/teacherController/studentStatisticsController.js"></script>
+    <script type="text/javascript" src="js/controllers/teacherController/listStudentControllerTeacher.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/listStudentController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/listTeacherController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/newExercisesCoordinatorController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/newTeacherController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/modifyStudentController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/modifyTeacherController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/listCoordinationsController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/coordinationOverviewController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/singleStudentStatisticsController.js"></script>
+    <script type="text/javascript" src="js/controllers/coordinatorController/homeCoordinatorController.js"></script>
+    <script type="text/javascript" src="js/controllers/administratorController/homeAdministratorController.js"></script>
+    <script type="text/javascript" src="js/controllers/administratorController/listCoordinatorController.js"></script>
+    <script type="text/javascript" src="js/controllers/administratorController/listTeacherController.js"></script>
+    <script type="text/javascript" src="js/controllers/administratorController/listStudentController.js"></script>
+    <script type="text/javascript" src="js/controllers/administratorController/newUserController.js"></script>
+    <script type="text/javascript" src="js/controllers/administratorController/modifyCoordinatorController.js"></script>
+    <script type="text/javascript" src="js/controllers/administratorController/modifyStudentController.js"></script>
+    <script type="text/javascript" src="js/controllers/administratorController/modifyTeacherController.js"></script>
+    <script type="text/javascript" src="js/shared/angular.js"></script>
+    <script type="text/javascript" src="js/shared/jquery.js"></script>
+    <script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="codemirror/mode/python/python.js"></script>
+    <script type="text/javascript" src="codemirror/mode/clike/clike.js"></script>
+    <script type="text/javascript" src="js/lib/ui-codemirror.js"></script>
+    <script type="text/javascript" src="js/lib/angular-google-plus.min.js"></script>
+
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+
+<body>
+<div class="wrapper" id ="wrapper-index">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>
+                <img src="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-python-icon.png" alt="Cinque Terre" height="22" width="22">
+                Plataforma FCyP
+            </h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <div ng-show = "!session">
+                <li><a ng-click="login()">Iniciar Sesion</a></li>
+            </div>
+
+            <div ng-show = "session">
+                <img src="{{image}}" class="img-circle" alt="Cinque Terre" align="center"height="200" width="200">
+                <li class="active">
+                    <h3>{{name}}</h3>
+                </li>
+                <li class="active">
+                    <h4>{{role}}</h4>
+                </li>
+            </div>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <div ng-show = "session">
+                <li><a ng-click="logout()">Cerrar Sesion</a></li>
+            </div>
+            <br>
+            <li>
+                <a href="http://www.informatica.usach.cl/" class="article">
+                Universidad de Santiago de Chile<br>
+                Departamento de Ingeniería <br>Informática
+                </a>
+            </li>
+        </ul>
+
+
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav class="navbar navbar-default" id = "containerTop">
+            <div class="container-fluid">
+
+                <div class="navbar-header" id = "hideButton">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#!{{home}}">
+                            <img src="https://image.flaticon.com/icons/png/512/25/25694.png" alt="Cinque Terre" height="30" width="30">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <div class="col-lg-12 h-scroll">
+            <div class="alert alert-danger" ng-show = "errorUsach">
+                <strong>Error!</strong> Para ingresar debe utilizar su cuenta usach (ej: juan.perez@usach.cl).
+            </div>
+            <div class="alert alert-danger" ng-show = "errorSistema">
+                <strong>Error!</strong> Usted no se encuentra ingresado en el sistema<br>Solicite acceso a su profesor/administrador.
+            </div>
+            <main>
+                <div ng-view></div>
+            </main>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/lib/d3.v3.min.js"></script>
+<script src="js/lib/nv.d3.js"></script>
+<script src="js/lib/angular-nvd3.js"></script>
+<link rel="stylesheet" href="js/lib/nv.d3.css">
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+    });
+</script>
+
+
+
+</body>
+
+
+</html>

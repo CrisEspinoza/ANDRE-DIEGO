@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="thumbnail" ng-init="getExercise()" ng-show="excerciseData != null">
+        <h1>Enunciado:</h1>
+        <h3>{{excerciseData.title}}</h3>
+        <h4>{{excerciseData.text}}</h4>
+        <h4>Solución:</h4>
+        <h4>{{excerciseData.answer}}</h4>
+    </div>
+
+    <div class="thumbnail">
+        <div class="container" ng-show="buttons">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="sendExcercise()">Enviar</button>
+            <button class="btn btn-info btn-lg" type="button"  ng-click="go('/student/exercisesStudent')">Atras</button>
+        </div>
+        <br>
+        <ui-codemirror ui-codemirror-opts="codemirrorSetting" ng-model="value"></ui-codemirror>
+    </div>
+
+    <div class="thumbnail" ng-show="resultsDiv">
+        <h1>Resultados:</h1>
+        <div align="center" ng-show="spinner">
+            <div class="loader"></div>
+        </div>
+        <div ng-show="results">
+            <h4 ng-repeat="x in output">{{x}}</h4>
+            <h4 ng-repeat="j in errors">{{j}}</h4>
+            <h4>Se ha completado el {{resStats}}% de este ejercicio.</h4>
+            <h4>Intentos: {{tries}}</h4>
+        </div>
+    </div>
+
+</div>

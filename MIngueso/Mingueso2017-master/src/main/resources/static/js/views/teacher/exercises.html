@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2> Resultados de ejercicios </h2></div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Avance</th>
+                </tr>
+                <tr ng-repeat = "x in exercises">
+                    <td>{{x.name}}</td>
+                    <td>{{x.status}}</td>
+                    <td><button type="button" class="btn btn-warning">Ver</button></td>
+            </table>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-info btn-lg" type="button" ng-click="go('/teacher/home')" value="Atras">
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+</div>

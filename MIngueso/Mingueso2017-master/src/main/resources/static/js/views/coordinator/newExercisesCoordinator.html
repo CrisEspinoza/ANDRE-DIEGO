@@ -1,0 +1,129 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form method="POST">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2>Nuevo Enunciado</h2></div>
+                    <div class="panel-body">
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="otro"> Título del enunciado </label>
+                                <input id="otro" ng-model="otro" type="text" class="form-control" placeholder="Hola Mundo">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="funct"> Nombre de la funcion</label>
+                                <input id="funct" ng-model="funct" type="text" class="form-control" placeholder="sumar">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sel1">Seleccione lenguaje de programacion</label>
+                            <select class="form-control" id="sel1">
+                                <option>C</option>
+                                <option>Java</option>
+                                <option>Python</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sel2">Seleccione tipo de ejercicio</label>
+                            <select class="form-control" id="sel2">
+                                <option>Recursivo</option>
+                                <option>Iterativo</option>
+                                <option>Listas</option>
+                                <option>Manejo de archivos</option>
+                                <option>Diccionarios</option>
+                                <option>Otro</option>
+
+
+                            </select>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="date-input">Fecha de entrega</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="date" value="2017-01-01" id="date-input">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="time-input">Hora de entrega</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="time" value="23:55:00" id="time-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <label for="text"> Descripción del enunciado(maximo 200 caracteres): </label>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <textarea id="text" ng-model="text" class="form-control" rows="10" cols="30" placeholder="Realizar un hola mundo..."></textarea>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="answer"> Respuesta: </label>
+                                <input id="answer" ng-model="answer" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <h2 class="text-center">Caso de prueba numero 1</h2>
+                            <div class="col-md-6">
+                                <label for="date-input">Parametro 1</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" placeholder="10" id="parametro">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="time-input">Resultado 1</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" placeholder="1200" id="parametro">
+                                </div>
+                            </div>
+                            <h2 class="text-center">Caso de prueba numero 2</h2>
+                            <div class="col-md-6">
+                                <label for="date-input">Parametro 2</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" placeholder="2" id="parametro">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="time-input">Resultado 2</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" placeholder="75" id="parametro">
+                                </div>
+                            </div>
+                            <h2 class="text-center  ">Caso de prueba numero 3</h2>
+                            <div class="col-md-6">
+                                <label for="date-input">Parametro 3</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" placeholder="pedro reyes" id="parametro">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="time-input">Resultado 3</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" placeholder="hola pedro reyes" id="parametro">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="panel-footer">
+                        <input class="btn btn-info btn-lg" type="button" ng-click="addExercise()" value="Agregar Enunciado">
+                        <input class="btn btn-info btn-lg" type="button" ng-click="go('/coordinator/home')" value="Atras">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

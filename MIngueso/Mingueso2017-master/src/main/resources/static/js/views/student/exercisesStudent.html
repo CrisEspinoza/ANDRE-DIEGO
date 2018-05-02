@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2>Mis ejercicios</h2></div>
+        <div class="panel-body" id="content" ng-controller="exerciseStudentController" ng-init="getExercises()" ng-show="exercises != null">
+            <table class="table table-hover" >
+                <tr>
+                    <th>Titulo</th>
+                    <th>Descrición</th>
+                </tr>
+                <tr ng-repeat = "x in exercises">
+                    <td>{{x.title}}</td>
+                    <td>{{x.text}}</td>
+                    <td> <input class="btn btn-info btn-lg" type="button" ng-click="doExcercise(x.id_exercise)" value="Realizar"> </td>
+            </table>
+        </div>
+        <div class="panel-footer">
+            <input class="btn btn-info btn-lg" type="button" ng-click="go('/student/home')" value="Atras">
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+</div>
